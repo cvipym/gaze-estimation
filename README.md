@@ -21,7 +21,7 @@
 > With the scrolling mode, users can effortlessly scroll through content by aligning their gaze with the desired scrolling direction. As they look up or down, the system detects the gaze direction and performs smooth scrolling accordingly
 - Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Rrw5OHCAx_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+[![Video Label](http://img.youtube.com/vi/Rrw5OHCAx_4/0.jpg)](https://youtu.be/Rrw5OHCAx_4)
 
 ## Installation
 ### 1. opencv
