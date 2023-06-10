@@ -11,6 +11,17 @@
 - Complete fomula for determining gaze direction
 ### 3. Demo
 - Provide a demonstration of the implemented gaze direction determination system
+### 4. Application(Mouse Control)
+- The controller operates through three distinct modes, each triggered by specific actions. First, by closing and opening the mouth, the mode changes seamlessly. Within the system, we have incorporated a total of three modes
+1) Mouse Movement
+> By tracking the direction of the user's gaze, the mouse cursor moves accordingly on the screen. You can use it like direction key
+2) Clicking
+> Leveraging blink detection, the system can execute mouse clicks based on the user's eye blinks. A left eye blink corresponds to a left-click action, while a right eye blink triggers a right-click action. This enables users to interact with various elements on the screen through eye movements.
+3) Scrolling
+> With the scrolling mode, users can effortlessly scroll through content by aligning their gaze with the desired scrolling direction. As they look up or down, the system detects the gaze direction and performs smooth scrolling accordingly
+- Video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Rrw5OHCAx_4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Installation
 ### 1. opencv
