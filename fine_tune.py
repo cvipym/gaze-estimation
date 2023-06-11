@@ -14,3 +14,5 @@ def load_weights_if_available(name):
     return w1,w2,w3
 
 
+if __name__ == '__main__':
+    load_weights_if_available('HSK')

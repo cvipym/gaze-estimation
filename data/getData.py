@@ -107,3 +107,5 @@ def fine_tune(name):
     
 
     
+if __name__ == '__main__':
+    fine_tune("HSK")
