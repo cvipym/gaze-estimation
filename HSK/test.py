@@ -44,7 +44,6 @@ with mp_face_mesh.FaceMesh(
     if results.multi_face_landmarks:
       
       mesh_coords = np.array([np.multiply([point.x, point.y],[image_w, image_h]).astype(int) for point in results.multi_face_landmarks[0].landmark])
-      print(mesh_coords[468])
       font = cv2.FONT_HERSHEY_SIMPLEX
       # cv2.putText(image, '.', (mesh_coords[468][0], mesh_coords[468][1]), font, 1, (0, 0, 255), 10, cv2.LINE_AA)
       # cv2.putText(image, '.', (mesh_coords[473][0], mesh_coords[473][1]), font, 1, (0, 0, 255), 10, cv2.LINE_AA)
@@ -53,7 +52,7 @@ with mp_face_mesh.FaceMesh(
       # cv2.polylines(image,[mesh_coords[LEFT_EYE]],True,(255,0,0),1,cv2.LINE_AA)
       # cv2.polylines(image,[mesh_coords[RIGHT_EYE]],True,(255,0,0),1,cv2.LINE_AA)
         
-      print(results.multi_face_landmarks[0])
+      
       for face_landmarks in results.multi_face_landmarks:
         mp_drawing.draw_landmarks(
             image=image,
