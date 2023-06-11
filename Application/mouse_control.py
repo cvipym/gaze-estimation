@@ -4,6 +4,7 @@ import mediapipe as mp
 import time
 import math
 import win32api, win32con
+from fine_tune import fine_tune
 
 # Euclidean distance between two points
 def euclaideanDistance(point1, point2):
@@ -69,7 +70,9 @@ state_str = ['Mouse Move', 'Click', 'Scroll']
 size_show = 20
 
 
-
+NAME = "HSK"
+###### Fine Tune ######
+[w1, w2, w3] = fine_tune(NAME)
 
 
 # Load the video
@@ -164,9 +167,14 @@ with mp.solutions.face_mesh.FaceMesh(
             # Sum of eye height and iris position, weighted, plus bias
             # verti < 0 : Looking upwards
             # verti > 0 : Looking downwards
+            '''
             verti = (LCen2Iris_y*L_weight + RCen2Iris_y*R_weight
                     - W*(L_height*L_weight+R_height*R_weight))/distance_correction + B
-            
+            '''
+            # With Using Fine Tune Weights
+            verti = w1*(LCen2Iris_y*L_weight + RCen2Iris_y*R_weight)/distance_correction 
+            + w2*(L_height*L_weight+R_height*R_weight)/distance_correction + w3
+
             # Display the direction of gaze on the screen
             pos_gaze = (int(glabella[0] +1000*horiz), int(glabella[1] + 1200*verti))
             

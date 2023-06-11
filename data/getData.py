@@ -5,7 +5,7 @@ import mediapipe as mp
 from data.utils import get_features
 import csv
 
-def fine_tune():
+def fine_tune(name):
     mp_drawing = mp.solutions.drawing_utils
     mp_drawing_styles = mp.solutions.drawing_styles
     mp_face_mesh = mp.solutions.face_mesh
@@ -40,9 +40,9 @@ def fine_tune():
     count = True
 
     cap = cv2.VideoCapture(0)
-    f = open(f'result.csv','a', newline='')
+    f = open(f'data/finetune/{name}.csv','a', newline='')
     wr = csv.writer(f)
-    wr.writerow([f'x', 'y','xi_hat','yi_hat','yl'])
+
     with mp_face_mesh.FaceMesh(
         max_num_faces=1,
         refine_landmarks=True,

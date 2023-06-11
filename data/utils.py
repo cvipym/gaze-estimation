@@ -29,13 +29,16 @@ def get_features(mesh_coords):
     yi = (LCen2Iris_y*L_weight + RCen2Iris_y*R_weight)/distance_correction
     yl = (L_height*L_weight+R_height*R_weight)/distance_correction
     
-    l = euclaideanDistance(mesh_coords[133], mesh_coords[362])
-    cos_theta = (mesh_coords[362][0]-mesh_coords[133][0])/l
-    sin_theta = (mesh_coords[362][1]-mesh_coords[133][1])/l
-    
-    xi_hat = xi*cos_theta + yi*sin_theta
-    yi_hat = -xi*sin_theta + yi*cos_theta
 
-    return xi_hat, yi_hat, yl   
+    # Theta - DEPRECATED 
+    
+    # l = euclaideanDistance(mesh_coords[133], mesh_coords[362])
+    # cos_theta = (mesh_coords[362][0]-mesh_coords[133][0])/l
+    # sin_theta = (mesh_coords[362][1]-mesh_coords[133][1])/l
+    
+    # xi_hat = xi*cos_theta + yi*sin_theta
+    # yi_hat = -xi*sin_theta + yi*cos_theta
+
+    return xi,yi,yl
          
     
